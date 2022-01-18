@@ -5,12 +5,12 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "Your Collection";
-const description = "Remember to replace this description";
-const baseUri = "ipfs://NewUriToReplace";
+const namePrefix = "ShMonsters";
+const description = "The collection of Monsters living on Shiden Network";
+const baseUri = "ipfs://changewithCID";
 
 const solanaMetadata = {
-  symbol: "YC",
+  symbol: "SHM",
   seller_fee_basis_points: 1000, // Define how much % you want from secondary market sales 1000 = 10%
   external_url: "https://www.youtube.com/c/hashlipsnft",
   creators: [
@@ -24,26 +24,33 @@ const solanaMetadata = {
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 10000,
     layersOrder: [
+      { name: "Three" },
+      { name: "Pair" },
+      { name: "Four" },
+      { name: "Double" },
+      { name: "House" },
       { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Sign" },
+      { name: "Hint" },
+      { name: "Pointer" },
+      { name: "Monster1" },
+      { name: "Monster2" },
+      { name: "Monster3" },
+      { name: "Monster5" },
+      { name: "Monster4" },
     ],
-  },
+  }
 ];
 
-const shuffleLayerConfigurations = false;
+const shuffleLayerConfigurations = true;
 
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 600,
+  height: 600,
   smoothing: false,
 };
 
